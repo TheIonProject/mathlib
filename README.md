@@ -27,8 +27,14 @@ In-progress features and refactors for the ion engine
 
 [View branch](https://github.com/torrra/mathlib/tree/dev)
 
+
 ### main
 
 Latest stable update
 
 [View branch](https://github.com/torrra/mathlib/tree/main)
+
+
+### ion
+
+Modified version of main with slightly different file structure and no unit tests, its only purpose is to make fetching easier for the [game engine project](https://github.com/TheIonProject/IonEngine)  
