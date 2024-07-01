@@ -4,9 +4,6 @@
 # features I usually use in CMake were added in 3.25, so allow 3.25 and up
 cmake_minimum_required(VERSION 3.25 FATAL_ERROR)
 
-# Enable unit tests (basically a boolean to read later on)
-option(UNIT_TESTS "libmath unit tests" OFF)
-
 # Write directory name into variable to automatically name lib project
 get_filename_component(PROJECT_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 
@@ -30,7 +27,7 @@ endif()
 add_subdirectory(mathlib)
 
 # Build executable with unit tests
-if (${UNIT_TESTS} EQUAL ON)
+if (EXISTS ${CMAKE_SOURCE_DIR}/UnitTest)
 
     add_subdirectory(UnitTest)
 

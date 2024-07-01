@@ -67,10 +67,7 @@ add_library(${TARGET_NAME} STATIC)
 target_sources(${TARGET_NAME} PRIVATE ${TARGET_FILES})
 
 # Set include directory
-target_include_directories(${TARGET_NAME}
-	PUBLIC ${TARGET_INCLUDE_DIR}
-	PUBLIC ${CMAKE_SOURCE_DIR}/ion
-)
+target_include_directories(${TARGET_NAME} PUBLIC ${TARGET_INCLUDE_DIR})
 
 # Raise warning level in MSVC and g++
 if(MSVC)

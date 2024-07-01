@@ -27,8 +27,6 @@ CScalarType is a template constraint that only accepts numeric data types
 #ifndef __MATRIX2_H__
 #define __MATRIX2_H__
 
-#include "IonDebug.hpp"
-
 #include "math/MathGeneric.hpp"
 #include "math/MatrixGeneric.hpp"
 
@@ -339,8 +337,6 @@ namespace ion::math
     Vector2<TValueType>&
     Matrix<2, TValueType>::operator[](int _index)
     {
-        ION_ASSERT(_index < 2);
-
         return m_values[_index];
     }
 
