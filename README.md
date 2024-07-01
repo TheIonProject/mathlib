@@ -23,7 +23,7 @@ The state of library as of June 7th 2024, the school assignment's due date
 
 ### dev : Jun 22nd 2024 - current
 
-In-progress features and refactors for the ion engine
+In-progress features and refactors with unit tests
 
 [View branch](https://github.com/torrra/mathlib/tree/dev)
 

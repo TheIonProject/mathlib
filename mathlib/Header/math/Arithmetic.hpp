@@ -29,8 +29,6 @@ CIntegralType only accepts integral numeric types
 #include <cmath>
 #include <limits>
 
-#include "IonCompiler.hpp"
-
 #include "math/MathGeneric.hpp"
 
 namespace ion::math
