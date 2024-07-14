@@ -33,7 +33,7 @@ CScalarType is a template constraint that only accepts numeric data types
 #include "math/Vector3.hpp"
 #include "math/Matrix2.hpp"
 
-namespace ion::math
+namespace math
 {
     template <CScalarType TValueType>
 	class Matrix<3, TValueType>
@@ -666,7 +666,7 @@ namespace ion::math
  	{
  		for (int column = 0; column < 3; ++column)
  		{
- 			if (!ion::math::AlmostEqual(m_values[row][column],
+ 			if (!math::AlmostEqual(m_values[row][column],
  				_rhs.m_values[row][column]))
  			{
  				return false;
@@ -709,7 +709,7 @@ namespace ion::math
 
 }
 
-namespace lm = ion::math;
-namespace LibMath = ion::math;
+namespace lm = math;
+namespace LibMath = math;
 
 #endif

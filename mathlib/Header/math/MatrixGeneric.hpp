@@ -9,7 +9,7 @@
 #include "math/Vector4.hpp"
 
 
-namespace ion::math
+namespace math
 {
     template <uint8_t TDimensions, CScalarType TValueType>
     class Matrix;

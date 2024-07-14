@@ -42,7 +42,7 @@ CScalarType is a template constraint that only accepts numeric data types
 
 
 
-namespace ion::math
+namespace math
 {
 
 	template <CScalarType TValueType>
@@ -499,7 +499,7 @@ namespace ion::math
 	void Vector<3, TValueType>::ReflectOnto(const Vector<3, TValueType>& _axis)
 	{
 		// Only reflect onto unit vector
-		Vector<3, TValueType>		normal = ion::math::Normalize(_axis);
+		Vector<3, TValueType>		normal = math::Normalize(_axis);
 
 		// Apply reflection formula
 		*this -= normal * (Dot(normal) * 2.f);
@@ -574,7 +574,7 @@ namespace ion::math
 	void Vector<3, TValueType>::Rotate
 	(Radian<TValueType> _angle, const Vector<3, TValueType>& _axis)
 	{
-		const Vector<3, TValueType>		norm = ion::math::Normalize(_axis);
+		const Vector<3, TValueType>		norm = math::Normalize(_axis);
 		const TValueType				xCpy = m_x, yCpy = m_y, zCpy = m_z;
 
 		// lib math trig functions are not precise enough,
@@ -1114,7 +1114,7 @@ namespace ion::math
 	}
 }
 
-namespace LibMath = ion::math;
+namespace LibMath = math;
 namespace lm = LibMath;
 
 #endif

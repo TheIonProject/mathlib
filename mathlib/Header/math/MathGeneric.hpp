@@ -31,10 +31,8 @@ Type suffix: Generic type, goes with T prefix
 
 #include <type_traits>
 
-namespace ion
+namespace math
 {
-  namespace math
-  {
     // Constrain type to a number:
     // int, float, etc... excluding pointers
     template <typename TEvaluatedType>
@@ -80,7 +78,6 @@ namespace ion
       a / b;
     };
 
-  }
 }
 
 #endif

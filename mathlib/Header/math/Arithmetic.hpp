@@ -31,7 +31,7 @@ CIntegralType only accepts integral numeric types
 
 #include "math/MathGeneric.hpp"
 
-namespace ion::math
+namespace math
 {
 
     // Absolute value
@@ -474,7 +474,7 @@ namespace ion::math
 // !Implementation
 }
 
-namespace LibMath = ion::math;
+namespace LibMath = math;
 namespace lm = LibMath;
 
 #endif

@@ -38,7 +38,7 @@ CScalarType is a template constraint that only accepts numeric data types
 #include "Trigonometry.hpp"
 
 
-namespace ion::math
+namespace math
 {
 
 	template <CScalarType TValueType>
@@ -408,7 +408,7 @@ namespace ion::math
 	void Vector<2, TValueType>::ReflectOnto(const Vector<2, TValueType>& _axis)
 	{
 		// Only reflect onto unit vector
-		Vector<2, TValueType>		normal = ion::math::Normalize(_axis);
+		Vector<2, TValueType>		normal = math::Normalize(_axis);
 
 		// Apply reflection formula
 		*this -= normal * (Dot(normal) * 2.f);
@@ -861,7 +861,7 @@ namespace ion::math
 
 }
 
-namespace LibMath = ion::math;
+namespace LibMath = math;
 namespace lm = LibMath;
 
 #endif

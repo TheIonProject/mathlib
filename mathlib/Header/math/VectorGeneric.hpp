@@ -35,7 +35,7 @@ Type suffix: Generic type, goes with T prefix
 
 #include "math/MathGeneric.hpp"
 
-namespace ion::math
+namespace math
 {
     // Generic vector class , TDimentions defines the number of components (x, y, z...)
     // TValueType the type of the data it contains

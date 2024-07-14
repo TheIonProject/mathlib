@@ -7,7 +7,7 @@
 #endif // ! FLT_MAX
 
 
-namespace ion::math
+namespace math
 {
 
 

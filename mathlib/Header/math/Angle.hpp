@@ -49,7 +49,7 @@ CScalarType is a template constraint that only accepts numeric data types
 #define HALF_CIRCLE_DEG		180.f
 #define FULL_CIRCLE_DEG		360.f
 
-namespace ion::math
+namespace math
 {
 	template <CScalarType TValueType = float>
 	class Radian;
@@ -241,10 +241,10 @@ namespace ion::math
 		// Wrap value depending on argument
 
 		if (_wrap180)
-			return ion::math::Wrap(m_value, -HALF_CIRCLE_DEG, HALF_CIRCLE_DEG);
+			return math::Wrap(m_value, -HALF_CIRCLE_DEG, HALF_CIRCLE_DEG);
 
 		else
-			return ion::math::Wrap(m_value, 0.f, FULL_CIRCLE_DEG);
+			return math::Wrap(m_value, 0.f, FULL_CIRCLE_DEG);
 	}
 
 
@@ -255,10 +255,10 @@ namespace ion::math
 		// Wrap value depending on argument
 
 		if (_wrapPi)
-			return ion::math::Wrap(m_value * DEG2RAD, -MTH_PI, MTH_PI);
+			return math::Wrap(m_value * DEG2RAD, -MTH_PI, MTH_PI);
 
 		else
-			return ion::math::Wrap(m_value * DEG2RAD, 0.f, RAD_CIRCLE);
+			return math::Wrap(m_value * DEG2RAD, 0.f, RAD_CIRCLE);
 	}
 
 
@@ -569,10 +569,10 @@ namespace ion::math
 	{
 		// Wrap value depending on argument
 		if (_wrap180)
-			return ion::math::Wrap(m_value * RAD2DEG, -HALF_CIRCLE_DEG, HALF_CIRCLE_DEG);
+			return math::Wrap(m_value * RAD2DEG, -HALF_CIRCLE_DEG, HALF_CIRCLE_DEG);
 
 		else
-			return ion::math::Wrap(m_value * RAD2DEG, 0.f, FULL_CIRCLE_DEG);
+			return math::Wrap(m_value * RAD2DEG, 0.f, FULL_CIRCLE_DEG);
 	}
 
 
@@ -859,21 +859,21 @@ namespace ion::math
 
 
 
-	inline Radian<float> ion::math::Literal::operator""_rad(long double _val)
+	inline Radian<float> math::Literal::operator""_rad(long double _val)
 	{
 		// Get numeric value from literal
 		return Radian(static_cast<float>(_val));
 	}
 
 
-	inline Radian<float> ion::math::Literal::operator""_rad(unsigned long long int _val)
+	inline Radian<float> math::Literal::operator""_rad(unsigned long long int _val)
 	{
 		// Get numeric value from literal
 		return Radian(static_cast<float>(_val));
 	}
 
 
-	inline Degree<float> ion::math::Literal::operator""_deg(long double _val)
+	inline Degree<float> math::Literal::operator""_deg(long double _val)
 	{
 		// Get numeric value from literal
 		return Degree<float>(static_cast<float>(_val));
@@ -891,8 +891,8 @@ namespace ion::math
 
 // !Literal operators implementation
 
-namespace	LibMath = ion::math;
-namespace	lm = ion::math;
+namespace	LibMath = math;
+namespace	lm = math;
 
 
 #endif

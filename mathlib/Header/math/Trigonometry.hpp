@@ -33,7 +33,7 @@ AUTHOR: Noah de Pischof | @torrra on GitHub
 #define MAX_COS		1.f
 
 
-namespace ion::math
+namespace math
 {
 	// Compute cosine of an angle in radians using
 	// 6 iterations of Taylor's series
@@ -104,7 +104,7 @@ namespace ion::math
 			powResult = Pow(radians, it * 2);
 
 			// Divide result by factorial of said power * sign
-			itResult = powResult * ion::math::Factorials<TValueType>::m_evenFacts[it - 1];
+			itResult = powResult * math::Factorials<TValueType>::m_evenFacts[it - 1];
 
 			cosResult += itResult;
 
@@ -146,7 +146,7 @@ namespace ion::math
 			powResult = Pow(radians, it * 2);
 
 			// Divide result by factorial of said power * sign
-			itResult = powResult * ion::math::Factorials<TValueType>::m_evenFacts[it - 1];
+			itResult = powResult * math::Factorials<TValueType>::m_evenFacts[it - 1];
 
 			cosResult += itResult;
 
@@ -242,7 +242,7 @@ namespace ion::math
 
 
 	template <CScalarType TValueType> inline
-	const TValueType ion::math::Factorials<TValueType>::m_evenFacts[] =
+	const TValueType math::Factorials<TValueType>::m_evenFacts[] =
 	{
 		// Pre-compute even factorials and divisions
 		// for faster cosine execution
@@ -259,7 +259,7 @@ namespace ion::math
 
 }
 
-namespace LibMath = ion::math;
-namespace lm = ion::math;
+namespace LibMath = math;
+namespace lm = math;
 
 #endif

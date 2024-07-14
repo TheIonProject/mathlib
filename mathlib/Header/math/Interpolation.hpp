@@ -27,7 +27,7 @@ AUTHOR: Noah de Pischof | @torrra on GitHub
 #include "math/Vector3.hpp"
 #include "math/Vector2.hpp"
 
-namespace ion::math
+namespace math
 {
 	// Linear interpolation between a start, an end and a ratio
 	// between 0 and 1
