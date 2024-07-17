@@ -30,6 +30,7 @@ CScalarType is a template constraint that only accepts numeric data types
 
 #include "math/Matrix3.hpp"
 #include "math/Vector4.hpp"
+#include "math/Vector3.hpp"
 
 namespace math
 {
@@ -86,6 +87,10 @@ namespace math
 			Radian<TValueType> _angleY,
 			Radian<TValueType> _angle
 	);
+
+
+	// Get rotation matrix from three angles stored in a vector (column-major)
+	static inline Matrix4<TValueType> RotationMatrix(Vector3<TValueType> angles);
 
 	inline	TMatrixType&		operator=(const TMatrixType& _rhs);
 	inline	TMatrixType&		operator=(const TValueType _rhs[][4]);
@@ -392,6 +397,17 @@ namespace math
 
 		return rotationMatrix;
 
+	}
+
+	template<CScalarType TValueType>
+	inline Matrix4<TValueType>
+	Matrix<4, TValueType>::RotationMatrix(Vector3<TValueType> angles)
+	{
+		Radian<TValueType>		angleX(angles.X()),
+								angleY(angles.Y()),
+								angleZ(angles.Z());
+
+		return RotationMatrix(angleX, angleY, angleZ);
 	}
 
 
